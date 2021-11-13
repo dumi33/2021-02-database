@@ -1,0 +1,14 @@
+<h1> {{title}}</h1>
+
+<table>
+    <tr>
+        <td>Dname</td>
+        <td>Dnumber</td>
+    </tr>
+    {{#each department}} <!-- 각 department를 출력 -->
+    <tr>
+        <td>{{Dname}}</td>
+        <td>{{Dnumber}}</td>
+    </tr>
+    {{/each}}
+</table>
