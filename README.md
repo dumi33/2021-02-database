@@ -39,7 +39,7 @@ CREATE TABLE STUDENT (Name VARCHAR(30) NOT NULL,
 Name|StudentNumber|Major|Grade|Date|Email
 ---|---|---|---|---|---|
 김두미|12191728|정통|3|2019-03-02|dumi33@naver.com|
-홍길동|12211234|정통|1||2021-03-02|gildong@naver.com|
+홍길동|12211234|정통|1|2021-03-02|gildong@naver.com|
 
 <br>
 
@@ -48,7 +48,7 @@ Name|StudentNumber|Major|Grade|Date|Email
 1. mysql에 'week8' 스키마를 생성한다.
     > create schema if not exists `week8` default character set utf8mb4;
 2. 테이블을 생성한다. 
-    > create table EMPLOYEE
+    > create table EMPLOYEE <br>
     > create table DEPARTMENT
 3. localhost에 접속하여 컬럼들을 추가해준다.
 
@@ -74,18 +74,19 @@ Dname|Dnumber|Mgr_ssn|Mgr_start_date
 
 ## 10주차 DB 테이블 내용
 
-## <span style="color:red"> 10주차 테이블</span>
 
 ## <span style="color:green"> 10주차 테이블 - 학생테이블</span>
 
 Sname|Ssn|Sno
 ---|---|---|
-김두미|12191728|1
-김두수|12191729|2
-김두양|12191730|3
-문채영|12191731|4
-박소언|12191732|5
+김두미|12191728|1|
+김두수|12191729|2|
+김두양|12191730|3|
+문채영|12191731|4|
+박소언|12191732|5|
 
+
+## DB 실습_README 작성법
 
 <pre>
 <code>
