@@ -2,19 +2,17 @@
 
 ## 3주차 DB 테이블 내용
 
-1. 레포지토리 복사 (wsl 환경에서 명령어 입력)
-    - (SSH 설정한 경우) git clone git@github.com:dumi33/2021-02-database.git
-    - (token을 사용하는 경우) git clone https://github.com/dumi33/2021-02-database.git
-2. week3 폴더로 이동
-    >cd week3
-3. 콘솔창 (powershell)에서 npm package 설치
-    > npm install
-4. database/sql.js에서 본인의 데이터베이스 정보 입력(주석 부분)
 1. 명령 프롬프트를 이용해서 mysql에 접속한다.
+    > mysql -uroot -p
+    - 비밀번호 입력
 2. 새롭게 스키마와 테이블을 만든다.
+    > create table student ~~
 3. 컬럼들을 추가해준다. 
+    > insert into student ~~
 
 <br>
+
+## sql 코드 
 
 ```sql
 CREATE TABLE STUDENT (Name VARCHAR(30) NOT NULL,
@@ -35,6 +33,7 @@ CREATE TABLE STUDENT (Name VARCHAR(30) NOT NULL,
     update student set Grade=1 where Name = '홍길동';
 ```
 
+
 ## <span style="color:red"> 3주차 테이블</span>
 
 Name|StudentNumber|Major|Grade|Date|Email
@@ -42,6 +41,50 @@ Name|StudentNumber|Major|Grade|Date|Email
 김두미|12191728|정통|3|2019-03-02|dumi33@naver.com|
 홍길동|12211234|정통|1||2021-03-02|gildong@naver.com|
 
+<br>
+
+## 8주차 DB 테이블 내용
+
+1. mysql에 'week8' 스키마를 생성한다.
+    > create schema if not exists `week8` default character set utf8mb4;
+2. 테이블을 생성한다. 
+    > create table EMPLOYEE
+    > create table DEPARTMENT
+3. localhost에 접속하여 컬럼들을 추가해준다.
+
+## <span style="color:red"> 8주차 테이블</span>
+
+## <span style="color:green"> 8주차 테이블 - 직원테이블</span>
+Fname|Minit|Lname|Ssn|Bdate|Address|Sex|Salary|Super_ssn|Dno
+---|---|---|---|---|---|---|---|---|---|
+두미|F|김|12191728|wed Jan 10 2001|안산|여|20||1|
+상준|S|김|12191729|sun Sep 24 2000|인천|남|30|12191728|3|
+건후|G|이|12191730|sat Apr 05 1997|부산|남|10||4|
+진태|J|박|12191731|mon Sep 23 1996|서울|남|40|12191729|6|
+도경|D|이|12191732|wed Oct 23 1996|대구|여|35|12191728|4|
+
+## <span style="color:green"> 8주차 테이블 - 부서테이블</span>
+Dname|Dnumber|Mgr_ssn|Mgr_start_date
+---|---|---|---|
+경리부|1|12191728|Sat Oct 01 2021|
+인사부|4|12191733|Fri Apr 05 2019|
+문서부|6|12191731|Wed Dec 02 2020|
+
+<br>
+
+## 10주차 DB 테이블 내용
+
+## <span style="color:red"> 10주차 테이블</span>
+
+## <span style="color:green"> 10주차 테이블 - 학생테이블</span>
+
+Sname|Ssn|Sno
+---|---|---|
+김두미|12191728|1
+김두수|12191729|2
+김두양|12191730|3
+문채영|12191731|4
+박소언|12191732|5
 
 
 <pre>
@@ -60,9 +103,6 @@ const pool = mysql.createPool(
 </code>
 </pre>
 
-
-
-
 ## <span style="color:red"> 테이블</span>
 
 이름|과|전공|학번
@@ -74,8 +114,3 @@ const pool = mysql.createPool(
 
 ## 텍스트 강조
 - **데이터베이스** 실습은 재미 ~~없어요~~ 있어요
-
-## 8주차 DB 테이블 내용
-
-
-## 10주차 DB 테이블 내용
